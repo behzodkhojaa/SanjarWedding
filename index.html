@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walimat</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Bulma Version 0.9.4-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/menikah.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+    <script
+      src="https://kit.fontawesome.com/2828f7885a.js"
+      integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.coundown.js"></script>
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <!-- Begin Script for Countdown -->
+
+    <!-- Github Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body class="has-navbar-fixed-bottom">
+    <!-- Begin Preloader -->
+    <div class="preloader-wrapper">
+      <div class="preloader">
+        <img src="image/favicon.png" alt="Flower" />
+      </div>
+    </div>
+    <!-- End Preloader-->
+    <!-- Begin Header -->
+    <div class="header-wrapper" id="home">
+      <!-- Begin Hero -->
+      <section class="hero is-large">
+
+        <img src="../image/Ibrohim (3).gif" alt="initials" class="fade-in">
+
+        <!-- Begin Bottom Nav-->
+        <nav class="navbar is-fixed-bottom">
+        
+          <!-- <div id="mobile-nav" class="navbar-menu is-active"> -->
+            <!-- <div class="navbar-end"> -->
+              <div class="navbar-item">
+                <a class="navbar-item" href="#home">
+                  <span class="material-icons-outlined">home</span>
+                  <span class="text">Home</span>
+                </a>
+              </div>
+              <div class="navbar-item">
+                <a class="navbar-item" href="#Waktu">
+                  <span class="material-icons-outlined">event</span>
+                  <span class="text">Sana</span>
+                </a>
+              </div>
+              <div class="navbar-item">
+                <a class="navbar-item" href="#lokasi">
+                  <span class="material-icons-outlined">place</span>
+                  <span class="text">Manzil</span>
+                </a>
+              </div>
+            
+
+              <div class="navbar-item">
+                <a class="navbar-item" href="#contact">
+                  <span class="material-icons-outlined">phone</span>
+                  <span class="text">Contact</span>
+                </a>
+              </div>
+              <div class="navbar-item">
+                <a class="navbar-item" href="#donation">
+                  <!-- <span class="material-icons-outlined">dollars</span> -->
+                  <img src="image/Dollar_icon.png" height="25" width="25" alt="">
+                  <span class="text">To'yona</span>
+                </a>
+              </div>
+            <!-- </div> -->
+          <!-- </div> -->
+        </nav>      
+        <!-- End Bottom Nav-->
+
+        <!-- Begin Hero Content-->
+        <div class="hero-body">
+          <div class="overlay container has-text-centered">
+            <!-- <h1 class="subtitle">WALIMATULURUS <br> SHA | ZAMIER </h1> -->
+            <!-- <img class="initials" src="image/initials.png" alt="initials"> -->
+            <!-- <h2 class="title">Shahirrah & Zamier</h2> -->
+            <!-- <div class="bottom-section"> -->
+              <br/>
+              <br/>
+            <h4 class="subtitle tempatwaktu fade-in">
+              Seshanba, 9 Iyul 2024
+              </br>
+              Ibrohim va Hafiza 
+              </br>
+              larning nikoh oqshomiga taklif qilamiz
+            </h4>
+            <!-- </div> -->
+                        <!-- Start Countdown -->
+            <div>
+              <ul id="hitungmundur" class="fade-in">
+                <li><span class="days">00</span><p class="days_text">Kun</p></li>
+                <li class="separator">:</li>
+                <li><span class="hours">00</span><p class="hours_text">Soat</p></li>
+                <li class="separator">:</li>
+                <li><span class="minutes">00</span><p class="minutes_text">Daqiqa</p></li>
+                <li class="separator">:</li>
+                <li><span class="seconds">00</span><p class="seconds_text">Sekund</p></li>
+              </ul>
+              <div class="spasi"></div>
+              <script type="text/javascript">
+                function updateCountdown() {
+                  var now = new Date();
+                                          //month,day,year
+                  var targetDate = new Date('07/09/2024 19:00:00'); // Set your target date and time here
+
+                  var timeDifference = targetDate - now;
+
+                  if (timeDifference <= 0) {
+                    clearInterval(countdownInterval);
+                    // You can add code to execute when the countdown reaches zero here
+                    // For example: alert('Countdown reached zero!');
+                  } else {
+                    var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                    document.querySelector('.days').innerText = formatTime(days);
+                    document.querySelector('.hours').innerText = formatTime(hours);
+                    document.querySelector('.minutes').innerText = formatTime(minutes);
+                    document.querySelector('.seconds').innerText = formatTime(seconds);
+                  }
+                }
+
+                function formatTime(time) {
+                  return time < 10 ? '0' + time : time;
+                }
+
+                // Initial call to update the countdown
+                updateCountdown();
+
+                // Set up an interval to update the countdown every second
+                var countdownInterval = setInterval(updateCountdown, 1000);
+                </script>
+                </div>
+            <!-- End Countdown -->
+</div>
+
+          </div>
+        </div>
+        <!-- End Hero Content-->
+        <!-- Begin Hero Menu -->
+        <!-- <div class="hero-foot ">
+          <div class="hero-foot--wrapper">
+            <div class="columns">
+              <div class="column is-12 hero-menu-desktop has-text-centered">
+                <ul>
+                  <li class="is-active">
+                    <a href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a href="#Waktu">Waktu</a>
+                  </li>
+                  <li>
+                    <a href="#lokasi">Lokasi</a>
+                  </li>
+                  <li>
+                    <a href="#tentang-sherly-daeng">Tentang Sherly & Daeng</a>
+                  </li>
+
+                  <li>
+                    <a href="#rsvp">RSVP</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- End Hero Menu -->
+      </section>
+      <!-- End Hero -->
+    </div>
+    <!-- End Header -->
+
+    <!-- Begin Main Content -->
+    <div class="main-content">
+    <!-- Begin regular-section-->
+      <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
+        </div>
+
+        <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
+          <div
+            class="column is-12 has-vertically-aligned-content">
+            <p class="bodytext has-text-centered">
+              <!-- <div class="invite-main salam">Assalamualaikum Warahmatullahi Wabarakatuh</div> -->
+              <div class="invite-main">
+                <em>" Биз сизларни жуфт-жуфт қилиб яратдик."</em>
+                <br>
+                An Naba' 78:8
+              </div>
+              <div class="invite-main">
+                Assalomu aleykum, sizlarni 
+                <br>
+                nikoh dasturxonimizga lutfan taklif qilamiz
+              </div>
+            </p>
+          </div>
+        </div>
+
+        <span class="space40px"></span>
+
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <div class="nama-lengkap">
+            Ibrohim
+          </div>
+          <div class="ampersand">&</div>
+          <div class="nama-lengkap">
+            
+          </div>
+          <div class="nama-lengkap father">Xafiza</div>
+           
+        </div>
+        <span class="space40px"></span>
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+        </div>
+        <span class="space40px"></span>
+        <span class="space40px"></span>
+      </section>
+    <!-- End regular-section-->    
+      
+      <!-- Begin Waktu Section -->
+      <section class="section-dark" id="Waktu">
+        <div class="container">
+
+          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+            <h1 class="title has-text-centered section-title">Kuni</h1>
+          </div>
+          <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
+            <div
+              class="column is-12 has-vertically-aligned-content">
+            
+              <p class="is-larger has-text-centered">
+                  <div class="waktu tanggal-hari has-text-centered">Seshanba</div> 
+                  <div class="waktu tanggal-angka has-text-centered">9</div>
+                  <div class="waktu tanggal-bulan has-text-centered">Iyul 2024</div>
+              </p>
+            
+            </div>
+            <!-- <div class="column is-4 has-vertically-aligned-content">
+            
+              <p class="waktu is-larger has-text-centered">
+                Akad Nikah:
+                <br>
+                <strong>17.00 WIB</strong>
+              </p> -->
+          </div>
+
+          <div class="column is-12 has-vertically-aligned-content">
+            <h1 class="waktu is-larger has-text-centered">
+              To'y davomiyligi:
+              <br>
+              <strong>19:00  - 21:00 </strong>
+            </h1>
+          </div>
+          
+        </div>
+        <!-- End Waktu Content -->
+
+        <div class="space40px"></div>
+      </section>
+      
+      <!-- Begin Lokasi Section -->
+      <section class="section-darker" id="lokasi" >
+        <div class="container">
+          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+            <h1 class="title has-text-centered section-title">Manzil</h1>
+            <p class="tempat is-larger has-text-centered">
+              <strong>Toshkent shaxar</strong>
+              <br>
+                  Toshkent, Olmazor tumani, Ziyo mahalla fuqarolar yigʻini
+              <br>
+              <br>
+            </p>
+          </div>
+          <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+            <a href="https://maps.app.goo.gl/MPKRnj7duyri3PnA9" class="button btn-cta" target="_blank" data-aos="zoom-in">
+              <i class="far fa-directions"></i>
+              &nbsp;&nbsp;Google Xarita
+            </a>
+          </div>
+          
+          <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+            <a href="https://ul.waze.com/ul?place=ChIJTbkgEFumTj8RDg3EHDg_itY&ll=38.87465830%2C65.79278860&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" class="button btn-cta" target="_blank" data-aos="zoom-in">
+              <i class="far fa-directions"></i>
+              &nbsp;&nbsp;Waze
+            </a>
+          </div>
+          <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+            <a href="https://yandex.uz/maps/-/CDvFYSLf" class="button btn-cta" target="_blank" data-aos="zoom-in">
+              <i class="far fa-directions"></i>
+              &nbsp;&nbsp;Yandex
+            </a>
+          </div>
+          
+          <!-- <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+            <a href="https://yandex.uz/maps/-/CDbY4F5G" class="button btn-cta" target="_blank" data-aos="zoom-in">
+              <i class="far fa-directions"></i>
+              &nbsp;&nbsp;Yandex
+            </a>
+          </div> -->
+
+          <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.850918995646!2d69.20516637659344!3d41.35559399796572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8df91d8f4a43%3A0x330544c586da9abd!2sMarvarid%20toyxonasi!5e0!3m2!1sru!2s!4v1718775944565!5m2!1sru!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+          <div class="space40px"></div>
+        </div>
+      </section>
+      <!-- Begin Contact Content -->
+      <section class="section-darker contact" id="contact">
+        <div class="container">
+          <div class="columns is-multiline">          
+            <div class="column is-12 prolog">
+              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">KONTAKT</h1>
+            </div>
+            <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+              <p class="h2 subtitle">
+                Qandaydir savollaringiz bo'lsa murojaat qiling
+              </p>
+
+                <a href="https://t.me/i_bakhadirov" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+                  <i class="fab fa-telegram"></i>
+                  &nbsp;&nbsp;Telegram
+                </a>
+     
+              <div class="space40px"></div>
+
+              <div data-aos="fade-up" data-aos-easing="linear">
+                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+              </div>
+         </div>
+        </div>
+      </section>
+      <!-- End Contact Content -->
+
+<!-- Begin Donation Content -->
+<!-- Begin Donation Content -->
+<section class="section-donation" id="donation">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-12 prolog">
+        <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">To'yona uchun</h1>
+      </div>
+      <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+        <p class="h2 subtitle">
+          Biz kichik to'yonani ham katta hisoblaymiz. 
+        </p>
+
+        <div class="card-numbers">
+          <div class="card-number" data-aos="zoom-in">
+            <div class="card-content">
+              <p class="label">Uzcard Karta raqami:</p>
+              <p class="number" id="cardNumber1">6262 4700 5670 5887</p>
+              <button class="button is-small is-info" onclick="copyToClipboard('#cardNumber1')">Copy</button>
+            </div>
+          </div>
+
+          <div class="card-number" data-aos="zoom-in">
+            <div class="card-content">
+              <p class="label">Visa Karta Raqami:</p>
+              <p class="number" id="cardNumber2">4195 2500 4005 4791</p>
+              <button class="button is-small is-info" onclick="copyToClipboard('#cardNumber2')">Copy</button>
+              <br/>
+              <p class="number" id="cardHolder">S. YULDOSHKHUJAEV</p>
+              <button class="button is-small is-info" onclick="copyToClipboard('#cardHolder')">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="space40px"></div>
+
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Donation Content -->
+
+<!-- End Donation Content -->
+
+
+
+
+
+
+    <!-- Begin Footer -->
+    <div class="footer">
+      <div class="container">
+        <!-- <a href="https://github.com/daengdoang/daeng-sherly-menikah" class="has-vertically-align"> -->
+          <p class="has-vertically-align">
+            Created 
+            <span class="material-icons-outlined">
+              favorite
+            </span> 
+            by aydi.uz
+          </p>
+        <!-- </a> -->
+        <!-- <a href="https://bulma.io" class="has-vertically-align">
+          <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma">
+        </a>
+        <a href="https://www.netlify.com">
+          <img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" alt="Deploy with Netlify"/>
+        </a> -->
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menikah.js"></script>
+    <script src="js/modal.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: "ease-out",
+        duration: 800,
+      });
+    </script>
+
+
+    <script>
+      function copyToClipboard(element) {
+        var tempInput = document.createElement("input");
+        document.body.appendChild(tempInput);
+        tempInput.value = document.querySelector(element).textContent;
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        alert("Card number copied to clipboard!");
+      }
+    </script>
+
+  </body>
+</html>
